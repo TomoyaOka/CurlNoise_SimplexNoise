@@ -84,6 +84,7 @@ class App {
     this.renderer = new THREE.WebGLRenderer({ antialias: true ,alpha:true});
     this.renderer.setClearColor(new THREE.Color(App.RENDERER_SETTING.clearColor));
     this.renderer.setSize(App.RENDERER_SETTING.width, App.RENDERER_SETTING.height);
+    this.renderer.setPixelRatio(window.devicePixelRatio);
     const canvas = document.querySelector("#webgl");
     canvas.appendChild(this.renderer.domElement);
   }
